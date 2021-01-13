@@ -1,0 +1,50 @@
+<p>structural-directives works!</p>
+<div class="alert alert-danger" *ngIf="message">
+  {{ message }}
+</div>
+<ul class="list-group">
+  <ng-container *ngFor="let student of students; index as i"
+    ><!--*ngIf="student.length >6" -->
+    <li
+      class="list-group-item"
+      [ngClass]="{
+        'list-group-item-success': student.length < 5,
+        'list-group-item-danger': student.length >= 5
+      }"
+      [ngStyle]="{ color: student.length <=5 ? 'red' : 'blue' }"
+    >
+      {{ i + 1 }}.{{ student }}
+      <button class="btn btn-primary float-right" (click)="onDelete(i)">
+        delete
+      </button>
+    </li>
+  </ng-container>
+</ul>
+
+<table class="tabel col-md-8 offset-2">
+  <thead class="table-dark">
+    <tr>
+      <th>name</th>
+      <th>empid</th>
+      <th>salary</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employee; index as i">
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.empid }}</td>
+      <td>{{ emp.salary }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="deleteObj(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div [ngSwitch]="trainerName">
+  <div *ngSwitchCase="'Rajashekar'">Mean stack</div>
+  <div *ngSwitchCase="'Priyanka'">Mean stack</div>
+  <div *ngSwitchCase="'Giridhar'">Mean stack</div>
+  <div *ngSwitchDefault>Employee</div>
+</div>

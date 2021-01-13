@@ -1,0 +1,22 @@
+<p>property-binding</p>
+<h1>hello{{ name }}</h1>
+<img [src]="imageUrl" alt="" />
+
+<p>class Binding</p>
+<h1 [class.heading]="10 > 9">class</h1>
+<h1 [class.a1]="name.length > 6">hello{{ name }}</h1>
+<h1
+  [class.text-primary]="name.length > 6"
+  [class.text-warning]="name.length <= 6"
+>
+  hello{{ name }}
+</h1>
+
+<p>style binding</p>
+<h1 [style.backgroundColor]="student2.length > 5 ? 'red' : 'green'">
+  {{ student2 }}
+</h1>
+
+<p>event binding</p>
+<h1 #sum>hello {{ 20 + 30 }}</h1>
+<button class="btn btn-primary" (click)="onClick($event, sum)">click</button>
