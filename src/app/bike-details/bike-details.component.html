@@ -1,0 +1,16 @@
+<!-- <div class="container mt-3">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let bike of bikesAvailable;">
+      {{bike}}
+    </li>
+  </ul>
+</div> -->
+<div class="col-md-12">
+  <div class="card" >
+    <img [src]="bikesDetails.imageUrl" alt="" class="card-img-top">
+    <div class="card-body">
+      <h4>{{bikesDetails.brand}}-{{bikesDetails.model}}</h4>
+      <h6>Rs : {{bikesDetails.price}}.00</h6>
+    </div>
+  </div>
+</div>

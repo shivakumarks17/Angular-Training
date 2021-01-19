@@ -1,7 +1,3 @@
-nav{
-    margin: 0%;
-    background-color: black;
-}
 nav ul li{
     padding:20px;
     color: white;
@@ -14,3 +10,9 @@ nav ul li a{
 nav ul{
     margin: 0%;
 }
+/* nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+} */

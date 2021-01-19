@@ -1,13 +1,27 @@
-<nav>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/">About</a>
-        </li>
-        <li>
-            <a href="/">Login</a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" routerLink="#">Angular</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about/company">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/students">Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bikes">Bikes</a>
+      </li>
     </ul>
-</nav> 
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

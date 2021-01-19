@@ -9,7 +9,13 @@ export class StructuralDirectivesComponent implements OnInit {
   students = [
     "sagar",
     "shiva",
-    "prajwal"
+    "prajwal",
+    "akash",
+    "bhavesh",
+    "satya",
+    'suresh',
+    "saleem",
+    "sushanth"
   ]
   message: string;
   trainerName = 'Shiva';
